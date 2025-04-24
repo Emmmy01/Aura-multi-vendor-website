@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request an Item</title>
+  <style>
+    body { font-family: Arial; background: #f9f9f9; }
+    form { background: #fff; padding: 20px; max-width: 600px; margin: 40px auto; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    input, textarea, select { width: 90%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+    button { background: black; color: white; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; }
+    button:hover { background: red; }
+  </style>
+</head>
+<body>
+
+<form action="submit-request.php" method="POST" enctype="multipart/form-data">
+  <h2>Request What You Need</h2>
+  <input type="text" name="name" placeholder="Your Full Name" required>
+  <input type="email" name="email" placeholder="Email Address" required>
+  <input type="tel" name="phone" placeholder="Phone or WhatsApp Number (234)" required>
+
+  <input type="text" name="brand" placeholder="Preferred Brand (optional)">
+  <input type="text" name="color" placeholder="Color (optional)">
+  <input type="text" name="size" placeholder="Size (optional)">
+  <label>Upload an Image (optional):</label>
+  <input type="file" name="image">
+
+  <textarea name="request" rows="4" placeholder="Describe the item you need..." required></textarea>
+  <button type="submit">Submit Request</button>
+</form>
+<!-- Loader -->
+<div id="loader" class="fixed inset-0 bg-white z-[9999] flex items-center justify-center">
+    <div class="loader animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-black"></div>
+  </div>
+  
+  <script>
+    // Wait until everything loads
+    window.addEventListener("load", function () {
+      const loader = document.getElementById("loader");
+      loader.style.display = "none";
+    });
+  </script>
+  
+  <style>
+    .loader {
+      border-top-color: #f00;
+      border-radius: 50%;
+    }
+  </style>
+  
+</body>
+</html>

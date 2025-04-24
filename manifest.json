@@ -1,0 +1,23 @@
+{
+    "name": "Aura-Mutivendor",
+    "short_name": "Aura",
+    "description": "Your one-stop online store for everything!",
+"start_url": "/Aura_Mutivendor/index.php",
+
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "icons": [
+      {
+        "src": "icons/Gray_and_Black_Simple_Studio_Logo__1_-removebg-preview.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "icons/Gray_and_Black_Simple_Studio_Logo__1_-removebg-preview.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  
